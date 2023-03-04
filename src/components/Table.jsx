@@ -1,9 +1,11 @@
 import TableRow from "./TableRow"
+import { greekSymbols, mathSymbols, miscFormulas } from "./TableData"
 
 export default function Table(props) {
+    const tabledata = [greekSymbols, mathSymbols, miscFormulas]
     return (
         <div>
-            {props.data.map(i => {
+            {tabledata.map(i => {
                 return (
                     <div>
                         <h2>{i[0].name}</h2>
